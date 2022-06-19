@@ -59,10 +59,12 @@
             let min_dot = document.querySelector('.min_dot');
             let sec_dot = document.querySelector('.sec_dot');
             
-    
-            let h = new Date().getHours();
-            let m = new Date().getMinutes();
-            let s = new Date().getSeconds();
+            let date = new Date();
+            date.setHours(date.getHours()+5);
+            date.setMinutes(date.getMinutes()+30);
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
             let am = h>=12? "PM":"AM";
     
             if(h>12) {
